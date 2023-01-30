@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Form from './Form';
 
 const welcome = {
   salut: 'Bonjour',
@@ -18,6 +19,11 @@ const list = [
     prix: 9,
     couleur: 'jaune',
   },
+  {
+    nom: 'raisin',
+    prix: 3,
+    couleur: 'jaune',
+  },
 ];
 
 function App() {
@@ -27,13 +33,14 @@ function App() {
         {welcome.salut} {welcome.mot}
       </h1>
       <h2>{titre}!</h2>
-
+      <Form />
       <ul>
         {list.map(function(item){
-            return <li>{item.nom}</li>;
+            return <li>{item.nom}< input type = 'checkbox'></input> </li>;
         })}
       </ul>
     </div>
+
   );
 }
 
